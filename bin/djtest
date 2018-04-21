@@ -161,7 +161,6 @@ def main():
         os.environ['DJANGO_SETTINGS_MODULE'] = test_settings_no_migrations_module
         django.setup()
         for app in apps:
-            #available_methods += enumerate_test_methods(app, parsed.filter)
             app_inspector = AppInspector(app)
             available_methods += app_inspector.enumerate_test_methods(parsed.filter)
 
@@ -171,7 +170,6 @@ def main():
         exit(0)
 
     if parsed.filter:
-        #matching_methods = [method for method in available_methods if parsed.filter in method]
         test_labels = ' '.join(available_methods)
     else:
         test_labels = ' '.join(apps)

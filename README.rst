@@ -38,3 +38,25 @@ Sample usage
 
     Available apps: tasks, wallet_clients, frontend_api, trading_api, backend
 
+
+Sample config file
+------------------
+
+A sample "skeleton" config file "./.djtest.conf" is authomatically created on first run.
+
+You should edit it to add the list of apps to be tested.
+
+::
+
+  [general]
+  project=myproject
+  test_settings_module=myproject.settings.test_settings
+  test_settings_no_migrations_module=myproject.settings.test_settings_no_migrations
+  media_folder="../public/test_media/"
+  apps=app1, app2, appN
+
+
+Credits
+-------
+
+- `Tutorial on how to structure Python packages <https://github.com/storborg/python-packaging>`_
