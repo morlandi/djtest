@@ -44,8 +44,14 @@ class AppInspector(object):
         # example: ['base_case', 'test_count_beans']
 
         result = []
-        #for submodule in submodules:
-        submodule_names = [s.name for s in submodules]
+
+        # Hack to retrieve submodule names in different environments
+        submodules = [s for s in submodules]
+        try:
+            submodule_names = [s.name for s in submodules]
+        except:
+            submodule_names = [s[1] for s in submodules]
+
         for submodule_name in submodule_names:
 
             # import submodule
