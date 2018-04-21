@@ -8,7 +8,7 @@ Installation
 
 ::
 
-    pip install https://github.com/morlandi/djtest
+    pip install git+https://github.com/morlandi/djtest
 
 
 Sample usage
