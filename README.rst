@@ -42,9 +42,9 @@ Sample usage
 Sample config file
 ------------------
 
-A sample "skeleton" config file "./.djtest.conf" is authomatically created on first run.
+A sample "skeleton" config file "./.djtest.conf" is automatically created on first run.
 
-You should edit it to add the list of apps to be tested.
+You should edit it to specify the list of testable apps.
 
 ::
 
