@@ -8,6 +8,7 @@ import os
 import argparse
 import django
 import pprint
+import platform
 
 try:
     import configparser
@@ -19,6 +20,16 @@ from djtest.app_inspector import AppInspector
 
 
 test_runner = "python manage.py test --traceback"
+
+
+def get_version():
+    try:
+        import djtest
+        version = djtest.__version__
+        version += " (python: %s)" % platform.python_version()
+        return version
+    except:
+        return '???'
 
 
 def run_command(command, dry_run):
@@ -127,6 +138,7 @@ def main():
     parser.add_argument('-f', '--filter', help="Filtering: run only test methods matching specified pattern")
     parser.add_argument('-l', '--list', action='store_true', default=False, help="List available test methods")
     parser.add_argument('apps', nargs='*')
+    parser.add_argument('--version', action='version', version='%(prog)s ' + get_version())
     parsed = parser.parse_args()
     #print('Result:',  vars(parsed))
 

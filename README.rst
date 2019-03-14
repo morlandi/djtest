@@ -35,6 +35,7 @@ Sample usage
                             Filtering: run only test methods matching specified
                             pattern
       -l, --list            List available test methods
+      --version             show program's version number and exit
 
     Available apps: tasks, wallet_clients, frontend_api, trading_api, backend
 
