@@ -1,4 +1,5 @@
 import django
+import unittest
 import importlib
 import inspect
 import pkgutil
@@ -10,10 +11,21 @@ class AppInspector(object):
         self.app = app
 
     def is_test_class(self, klass):
-        if issubclass(klass, django.test.TestCase):
-            return True
-        if issubclass(klass, django.test.TransactionTestCase):
-            return True
+        try:
+            if issubclass(klass, django.test.TestCase):
+                return True
+        except:
+            pass
+        try:
+            if issubclass(klass, django.test.TransactionTestCase):
+                return True
+        except:
+            pass
+        try:
+            if issubclass(klass, unittest.TestCase):
+                return True
+        except:
+            pass
         return False
 
     def enumerate_test_methods(self, filter=''):
