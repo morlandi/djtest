@@ -71,6 +71,51 @@ You should edit it to specify the list of testable apps.
   apps=app1, app2, appN
 
 
+Sample "test settings" module
+-----------------------------
+
+::
+
+  from .settings import *
+
+  LANGUAGE_CODE = 'en'
+  TIME_ZONE = 'UTC'
+
+  ...
+
+Sample "test settings" module
+-----------------------------
+
+::
+
+    from project.settings.settings import *
+
+    LANGUAGE_CODE = 'en'
+    TIME_ZONE = 'UTC'
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+    ...
+
+Sample "test settings - no migrations" module
+---------------------------------------------
+
+::
+
+    from project.settings.test_settings import *
+
+    class DisableMigrations(object):
+
+        def __contains__(self, item):
+            return True
+
+        def __getitem__(self, item):
+            #return "notmigrations"
+            return None
+
+
+    MIGRATION_MODULES = DisableMigrations()
+
+
 Credits
 -------
 
