@@ -3,8 +3,22 @@ djtest
 
 An interactive test runner for Django projects.
 
+Purposes:
+
+- keep the list of apps available for test in a local configuration file
+- display the list of all available unit tests (-l option)
+- run unit tests for apps specified on command line
+- cleanup a test "media folder" before each execution
+- optionally filter the list of unit tests to be executed (-f option)
+
 Installation
 ------------
+
+::
+
+    pip install djtest
+
+or:
 
 ::
 
