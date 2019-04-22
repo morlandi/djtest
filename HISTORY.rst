@@ -3,6 +3,10 @@
 History
 =======
 
+v0.1.2
+------
+* cleanup
+
 v0.1.1
 ------
 * add test settings example to Readme

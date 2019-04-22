@@ -76,19 +76,7 @@ Sample "test settings" module
 
 ::
 
-  from .settings import *
-
-  LANGUAGE_CODE = 'en'
-  TIME_ZONE = 'UTC'
-
-  ...
-
-Sample "test settings" module
------------------------------
-
-::
-
-    from project.settings.settings import *
+    from myproject.settings.settings import *
 
     LANGUAGE_CODE = 'en'
     TIME_ZONE = 'UTC'
@@ -101,7 +89,7 @@ Sample "test settings - no migrations" module
 
 ::
 
-    from project.settings.test_settings import *
+    from myproject.settings.test_settings import *
 
     class DisableMigrations(object):
 
@@ -114,9 +102,3 @@ Sample "test settings - no migrations" module
 
 
     MIGRATION_MODULES = DisableMigrations()
-
-
-Credits
--------
-
-- `Tutorial on how to structure Python packages <https://github.com/storborg/python-packaging>`_
