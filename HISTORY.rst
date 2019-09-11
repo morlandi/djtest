@@ -3,6 +3,10 @@
 History
 =======
 
+v0.1.3
+------
+* --deprecations switch added
+
 v0.1.2
 ------
 * cleanup

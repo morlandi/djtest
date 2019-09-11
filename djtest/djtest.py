@@ -19,9 +19,6 @@ except:
 from djtest.app_inspector import AppInspector
 
 
-test_runner = "python manage.py test --traceback"
-
-
 def get_version():
     try:
         import djtest
@@ -115,8 +112,6 @@ apps=app1, app2
 
 def main():
 
-    global test_runner
-
     # Make sure cwd is in path
     sys.path.insert(0, os.getcwd())
 
@@ -137,13 +132,17 @@ def main():
     parser.add_argument('-n', '--dry-run', action='store_true', default=False, help="Don't execute commands, just pretend. (default: False)")
     parser.add_argument('-f', '--filter', help="Filtering: run only test methods matching specified pattern")
     parser.add_argument('-l', '--list', action='store_true', default=False, help="List available test methods")
+    parser.add_argument('-d', '--deprecations', action='store_true', default=False, help="Show deprecation warnings")
     parser.add_argument('apps', nargs='*')
     parser.add_argument('--version', action='version', version='%(prog)s ' + get_version())
     parsed = parser.parse_args()
     #print('Result:',  vars(parsed))
 
     # Adjust test_runner command according to given options
-    test_runner += " --verbosity=%d --settings=" % parsed.verbosity
+    test_runner = "python %s manage.py test --traceback --verbosity=%d --settings=" % (
+        '-Wd' if parsed.deprecations else '',
+        parsed.verbosity,
+    )
     if parsed.no_migrations:
         test_runner += test_settings_no_migrations_module
     else:
