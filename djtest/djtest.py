@@ -119,7 +119,7 @@ def main():
     config = read_config_file()
     project = config.get('general', 'project').strip()
     media_folder = config.get('general', 'media_folder').strip()
-    available_apps = config.get('general', 'apps').split(', ')
+    available_apps = config.get('general', 'apps').replace(',', ' ').split()
     test_settings_module = config.get('general', 'test_settings_module')
     test_settings_no_migrations_module = config.get('general', 'test_settings_no_migrations_module')
 

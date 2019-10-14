@@ -3,6 +3,10 @@
 History
 =======
 
+v0.1.4
+------
+* config file: use either ',' or spaces as separators in the app list
+
 v0.1.3
 ------
 * --deprecations switch added
