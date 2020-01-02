@@ -3,6 +3,12 @@
 History
 =======
 
+v0.1.5
+------
+* Create sample test settings files
+* rename dry_run and deprecations options
+* removed dependency on "six"
+
 v0.1.4
 ------
 * config file: use either ',' or spaces as separators in the app list
