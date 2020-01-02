@@ -9,12 +9,7 @@ import argparse
 import django
 import pprint
 import platform
-
-try:
-    import configparser
-except:
-    from six.moves import configparser
-    from six.moves import input
+import configparser
 
 from djtest.app_inspector import AppInspector
 
