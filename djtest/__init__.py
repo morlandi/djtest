@@ -1,6 +1,6 @@
 from .djtest import main
 
-__version__ = '0.1.5'
+__version__ = '0.1.6'
 
 def joke():
     return 'The quick brown fox jumps over the lazy dog'
