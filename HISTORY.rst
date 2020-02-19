@@ -3,6 +3,11 @@
 History
 =======
 
+v0.1.6
+------
+* Accept multiple filters separated by ','
+* Improved checks for command line parameters
+
 v0.1.5
 ------
 * Create sample test settings files

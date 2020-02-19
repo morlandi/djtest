@@ -29,6 +29,13 @@ class AppInspector(object):
         return False
 
     def enumerate_test_methods(self, filter=''):
+        result = []
+        filters = [f.strip() for f in filter.split(',')]
+        for f in filters:
+            result += self.enumerate_test_methods_for_filter(f)
+        return result
+
+    def enumerate_test_methods_for_filter(self, filter=''):
         """
         Return the list of optionally filtered) test methods
         available for specified app as follows:
