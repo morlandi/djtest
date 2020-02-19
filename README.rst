@@ -46,8 +46,8 @@ Sample usage
       -m, --no-migrations   Skip migrations. (default: False)
       -n, --dry-run         Don't execute commands, just pretend. (default: False)
       -f FILTER, --filter FILTER
-                            Filtering: run only test methods matching specified
-                            pattern
+                            Filtering: run only test methods matching specified pattern
+                            (multiple patterns separated by ',')
       -l, --list            List available test methods
       --version             show program's version number and exit
 

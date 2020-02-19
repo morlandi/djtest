@@ -183,7 +183,7 @@ def main():
     parser.add_argument('-v', '--verbosity', type=int, choices=[0, 1, 2, 3], default=2, help="Verbosity level. (default: 2)")
     parser.add_argument('-m', '--no-migrations', action='store_true', default=False, help="Skip migrations. (default: False)")
     parser.add_argument('-d', '--dry-run', action='store_true', default=False, help="Don't execute commands, just pretend. (default: False)")
-    parser.add_argument('-f', '--filter', help="Filtering: run only test methods matching specified pattern; (multiple patterns separated by ',')")
+    parser.add_argument('-f', '--filter', help="Filtering: run only test methods matching specified pattern (multiple patterns separated by ',')")
     parser.add_argument('-l', '--list', action='store_true', default=False, help="List available test methods")
     parser.add_argument('-D', '--deprecations', action='store_true', default=False, help="Show deprecation warnings")
     parser.add_argument('apps', nargs='*')
