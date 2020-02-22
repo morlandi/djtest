@@ -30,7 +30,7 @@ class AppInspector(object):
 
     def enumerate_test_methods(self, filter=''):
         result = []
-        filters = [f.strip() for f in filter.split(',')]
+        filters = [f.strip() for f in filter.split(',')] if filter is not None else ['', ]
         for f in filters:
             result += self.enumerate_test_methods_for_filter(f)
         return result

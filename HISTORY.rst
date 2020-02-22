@@ -3,6 +3,10 @@
 History
 =======
 
+v0.1.7
+------
+* fix --list option when no filter have been specified
+
 v0.1.6
 ------
 * Accept multiple filters separated by ','
