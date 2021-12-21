@@ -192,7 +192,7 @@ def main():
     #print('Result:',  vars(parsed))
 
     # Adjust test_runner command according to given options
-    test_runner = "python %s manage.py test --traceback --verbosity=%d --settings=" % (
+    test_runner = "python -u %s manage.py test --traceback --verbosity=%d --settings=" % (
         '-Wd' if parsed.deprecations else '',
         parsed.verbosity,
     )

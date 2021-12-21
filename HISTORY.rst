@@ -3,6 +3,10 @@
 History
 =======
 
+v0.1.8
+------
+* force the stdout and stderr streams to be unbuffered
+
 v0.1.7
 ------
 * fix --list option when no filter have been specified
