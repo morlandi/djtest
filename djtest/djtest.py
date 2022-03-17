@@ -249,8 +249,9 @@ def main():
         test_labels = ' '.join(apps)
 
     # Run tests
-    run_command("rm -fr " + media_folder, parsed.dry_run)
-    run_command("mkdir " + media_folder, parsed.dry_run)
+    if media_folder:
+        run_command("rm -fr " + media_folder, parsed.dry_run)
+        run_command("mkdir " + media_folder, parsed.dry_run)
     run_command(test_runner + ' ' + test_labels, parsed.dry_run)
 
 

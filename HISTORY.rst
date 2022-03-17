@@ -3,6 +3,10 @@
 History
 =======
 
+v0.1.9
+------
+* ignore media_folder when empty
+
 v0.1.8
 ------
 * force the stdout and stderr streams to be unbuffered
